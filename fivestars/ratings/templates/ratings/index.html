@@ -1,0 +1,9 @@
+{% if latest_ratings_list %}
+    <ul>
+    {% for rating in latest_ratings_list %}
+        <li><a href="/ratings/{{rating.id}}">{{ rating.first_name}}-{{ rating.last_name}}:{{ rating.comments}}</a></li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <p>No ratings are available</p>
+{% endif %}
