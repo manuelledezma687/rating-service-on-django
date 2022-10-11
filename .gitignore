@@ -1,1 +1,4 @@
 venv
+fivestars/fivestars/__pycache__
+fivestars/ratings/__pycache__
+fivestars/ratings/migrations/__pycache__
