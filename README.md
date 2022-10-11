@@ -48,3 +48,4 @@
         admin.site.register(Ratings)
     
     Luego ya podemos crear las views.
+    Para email unico unique=True

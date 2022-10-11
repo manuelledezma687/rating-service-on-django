@@ -1,0 +1,21 @@
+{% load static%}
+<link rel="stylesheet" href="{% static '../static/ratings/css/global.css' %}" />
+<link rel="stylesheet" href="{% static '../static/ratings/css/Ratings.css' %}" />
+<div id="ratings">
+    {% if latest_ratings_list %}
+    <h1 class="testimonials-title">Our testimonials</h1>
+    <div class='container-rating'>
+        <ul class="ul-rating">
+            {% for rating in latest_ratings_list %}
+            <li id='testimonials' class="shadow card.body">
+                    <p class="comments">{{ rating.comments}}</p>
+                    <h2 class="name-customer">{{ rating.first_name}} {{ rating.last_name}}</h2>
+                    <h4 class="date">Created at {{rating.pub_date}}</h4>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No ratings are available</p>
+        {% endif %}
+    </div>
+</div>

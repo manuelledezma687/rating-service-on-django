@@ -1,0 +1,19 @@
+{% load static%}
+<link rel="stylesheet" href="{% static '../static/ratings/css/global.css' %}" />
+<link rel="stylesheet" href="{% static '../static/ratings/css/Contact.css' %}" />
+<form class="contact-form" id='contact'action="">
+    <h1 class='contact-input'>Contact Us</h1>
+
+    <div class='contact-input'>
+        <label htmlFor="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="John Doe">       
+    </div>
+    <div class='contact-input'>
+        <label htmlFor="email">Email</label>
+        <input type="text" type="text" id="email" name="email" placeholder="youremail@mail.com" >       
+    </div>
+    <div class='contact-input'>
+        <input type="text" id="message" name="message" placeholder="Message">       
+    </div>
+    <button type="submit">Send</button>
+</form>
