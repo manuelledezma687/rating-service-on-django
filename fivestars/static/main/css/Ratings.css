@@ -21,11 +21,11 @@
 
 h1.testimonials-title {
     font-size: var(--seg);
-    text-align: center;
+    /* text-align: center; */
     padding-top: 5%;
     color: var(--white);
-    flex-direction: row;
-    transition: all 5ms ease;
+    /* flex-direction: row;
+    transition: all 5ms ease; */
 }
 
 
@@ -58,6 +58,7 @@ h1.testimonials-title {
     font-style: italic;
     font-size: var(--sm);
     font-family: 'Courier New', Courier, monospace;
+    width: 350px;
 }
 
 .name-customer{
@@ -86,6 +87,6 @@ h1.testimonials-title {
 @media (max-width: 1097px) {
 
     #ul-rating {
-        display: flex;
+        display: block;
         justify-content: center;
     }}

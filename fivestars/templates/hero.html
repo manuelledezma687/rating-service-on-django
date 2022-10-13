@@ -1,6 +1,6 @@
 {% load static%}
-<link rel="stylesheet" href="{% static '../static/ratings/css/global.css' %}" />
-<link rel="stylesheet" href="{% static '../static/ratings/css/Hero.css' %}" />
+<link rel="stylesheet" href="{% static '../static/main/css/global.css' %}" />
+<link rel="stylesheet" href="{% static '../static/main/css/Hero.css' %}" />
 <section class="hero-container">
     <div class='hero-banner'>
         <div class='content-box'>
@@ -8,21 +8,22 @@
                 move around the City comfortably and safely 24 hours a day.</p>
             <h1 class='just-time'>Just in time with&nbsp;<span> FiveStars.</span>
         </div>
-        <img src='../static/ratings/img/images/white-corolla.png' alt="corolla" id="white-corolla" />
+        <img src='../static/main/img/images/white-corolla.png' alt="corolla" id="white-corolla" />
     </div>
     <div class='main-form' id='booking'>
         <h1 class='title'>Quote your trip and book with us, to live the <span> best experience.</span>Just in time with
             <span>FiveStars.</span>
         </h1>
-        <form class="p-4 p-md-5 border rounded-3 needs-validation" novalidate id='form'>
+        <form class="p-4 p-md-5 border rounded-3 needs-validation" novalidate id='form'method="POST">
+            {% csrf_token %}
             <div class="row" id='double-input'>
                 <div class="col input-btn-padding-x mb-3" id='input-form'>
-                    <img src="../static/ratings/img/icons/point.svg" class="icon" alt="Pick Up" />
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Address Airport" required/>
+                    <img src="../static/main/img/icons/point.svg" class="icon" alt="Pick Up" />
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Pick Up" required name="pick_up"/>
                 </div>
                 <div class="col input-btn-padding-x mb-3" id='input-form'>
-                    <img src="../static/ratings/img/icons/point.svg" class="icon" alt="Drop Off" />
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Your Location" required/>
+                    <img src="../static/main/img/icons/point.svg" class="icon" alt="Drop Off" />
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Drop Off" required/>
                 </div>
             </div>
             <div class="row" id="double-input">

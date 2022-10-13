@@ -7,7 +7,7 @@ from .models import Rating
 
 
 class IndexView(generic.ListView):
-    template_name = "ratings/index.html"
+    template_name = "main/index.html"
     context_object_name = "latest_ratings_list"
 
     def get_queryset(self): 

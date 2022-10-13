@@ -32,9 +32,10 @@
 
   }
 
-  #instagram{
+  #social{
     width: 50px;
     height: 50px;
+    margin-right: 4%;
 
   }
 
@@ -43,3 +44,12 @@
     padding-top: 10px;
     font-style: italic;
   }
+
+
+  @media (max-width: 859px) {
+
+    .row {
+      display: block;
+      margin: 0;
+    }
+}
