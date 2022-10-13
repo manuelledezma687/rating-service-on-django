@@ -1,19 +1,24 @@
 {% load static%}
 <link rel="stylesheet" href="{% static '../static/ratings/css/global.css' %}" />
-<link rel="stylesheet" href="{% static '../static/ratings/css/Contact.css' %}" />
-<form class="contact-form" id='contact'action="">
+<!-- <link rel="stylesheet" href="{% static '../static/ratings/css/Contact.css' %}" /> -->
+<form class="contact-form needs-validation" novalidate id='contact'action="">
     <h1 class='contact-input'>Contact Us</h1>
 
     <div class='contact-input'>
         <label htmlFor="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="John Doe">       
+        <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>     
     </div>
     <div class='contact-input'>
         <label htmlFor="email">Email</label>
-        <input type="text" type="text" id="email" name="email" placeholder="youremail@mail.com" >       
+        <input type="email" class="form-control" type="email" id="email" name="email" placeholder="youremail@mail.com" required>     
     </div>
     <div class='contact-input'>
-        <input type="text" id="message" name="message" placeholder="Message">       
+        <label htmlFor="message">Message</label>
+        <input type="text"class="form-control" id="message" name="message" placeholder="Message" required>       
     </div>
+            <!-- <button class="g-recaptcha"
+        data-sitekey="reCAPTCHA_site_key"
+        data-callback='onSubmit'
+        data-action='submit'></button> -->
     <button type="submit">Send</button>
 </form>

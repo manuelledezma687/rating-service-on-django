@@ -5,13 +5,28 @@
     {% if latest_ratings_list %}
     <h1 class="testimonials-title">Our testimonials</h1>
     <div class='container-rating'>
-        <ul class="ul-rating">
+        <ul id="ul-rating" >
             {% for rating in latest_ratings_list %}
-            <li id='testimonials' class="shadow card.body">
-                    <p class="comments">{{ rating.comments}}</p>
-                    <h2 class="name-customer">{{ rating.first_name}} {{ rating.last_name}}</h2>
-                    <h4 class="date">Created at {{rating.pub_date}}</h4>
-            </li>
+            <li id='testimonials'>
+                <p class="comments">{{ rating.comments}}</p>
+                <h2 class="name-customer">{{ rating.first_name}} {{ rating.last_name}}</h2>
+                <div>
+                    <div>
+                        <h1></h1>
+                    </div>
+                </div>
+                <div class="starring">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4 class="date">Created at {{rating.pub_date}}</h4>
+                </div>
+
+        </li>
             {% endfor %}
         </ul>
         {% else %}
