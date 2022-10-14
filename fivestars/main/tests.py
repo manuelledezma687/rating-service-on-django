@@ -44,7 +44,6 @@ class RatingModelTest(TestCase):
 class RatingIndexViewTests(RatingModelTest, TestCase):
     def test_no_ratings(self):
         """If no rating exist, an appropiate message is displayed"""
-        # * Hago una petición GET al index de polls y guardo la respuesta en response
         response = self.client.get(reverse('ratings:index'))
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "No ratings are available")

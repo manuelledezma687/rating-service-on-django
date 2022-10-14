@@ -15,18 +15,20 @@ class Rating(models.Model):
     
     def was_published_recently(self):
         return timezone.now() >= self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+
     
 class Booking(models.Model):
     pick_up = models.CharField(max_length=50)
     destiny = models.CharField(max_length=50)
     full_name = models.CharField(max_length=50)
-    email= models.EmailField(max_length=20)
+    email= models.EmailField()
     flight = models.CharField(max_length=20)
-    date = models.CharField(max_length=50)  ##
-    date_time = models.CharField(max_length=50)  ##
-    payment_method = models.CharField(max_length=50)
+    date = models.DateField()
+    date_time = models.CharField(max_length=50)
+    payment_method = models.CharField(max_length=12)
     type_of_travel = models.CharField(max_length=12)                  
     observations = models.CharField(max_length=100)
-    passengers = models.IntegerField(default=1)
-
+    passengers = models.IntegerField()
     
+    def __str__(self):
+        return self.full_name
