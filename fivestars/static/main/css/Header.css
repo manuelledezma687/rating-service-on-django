@@ -68,13 +68,20 @@
 		font-size: 3.5rem;
 	}
 	.fivestars {
-		width: 280px;
+		width: 60%;
 	}
 }
 
 @media (max-width: 451px) {
 
 	.fivestars {
-		width: 240px;
+		width: 50%;
+	}
+}
+
+@media (max-width: 251px) {
+
+	.fivestars {
+		width: 180px;
 	}
 }

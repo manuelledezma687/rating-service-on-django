@@ -53,3 +53,11 @@
       margin: 0;
     }
 }
+
+@media (max-width: 390px) {
+
+  h4.email-contact {
+    font-size: 0.8rem;
+    width: auto;
+  }
+}

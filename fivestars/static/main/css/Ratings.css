@@ -20,12 +20,10 @@
 
 
 h1.testimonials-title {
-    font-size: var(--seg);
-    /* text-align: center; */
+    font-size: var(--eg);
     padding-top: 5%;
     color: var(--white);
-    /* flex-direction: row;
-    transition: all 5ms ease; */
+    width: auto;
 }
 
 
@@ -90,3 +88,10 @@ h1.testimonials-title {
         display: block;
         justify-content: center;
     }}
+
+    @media (max-width: 457px) {
+
+        .comments {
+            width: 150px;
+        }
+        }

@@ -5,7 +5,6 @@ from django.utils import timezone
 from django.urls.base import reverse
 
 from ratings.models import Rating
-#Acá se testean views y models
 
 class RatingModelTest(TestCase):
 
@@ -48,10 +47,3 @@ class RatingIndexViewTests(RatingModelTest, TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "No ratings are available")
         self.assertQuerysetEqual(response.context['latest_ratings_list'], [])
-
-    # def test_show_only_recent_ratings(self):
-    #     """The view should only show recent ratings. It cannot show future questions from the date they are consulted."""
-    #     response = self.client.get(reverse('ratings:index'))
-    #     self.assertEqual(response.status_code, 200)
-    #     future_rating = [self.rating, self.future_time]
-    #     self.assertNotContains(response, future_rating)
